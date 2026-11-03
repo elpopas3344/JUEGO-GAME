@@ -136,7 +136,6 @@ body {
     pointer-events: none;
 }
 
-/* --- Información y Detalles del Hero --- */
 .hero-info {
     display: flex;
     flex-direction: column;
@@ -226,18 +225,17 @@ body {
     box-shadow: 0 8px 25px rgba(247, 37, 133, 0.5);
 }
 
-/* --- Sección del Juego Iframe --- */
-.game-section {
+/* --- Sección de Galería / Documentación --- */
+.gallery-section {
     padding: 60px 5%;
-    background: linear-gradient(to bottom, var(--bg-main), #080c14);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: rgba(19, 28, 46, 0.4);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .section-title h2 {
@@ -249,6 +247,59 @@ body {
 
 .section-title p {
     color: var(--text-muted);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.gallery-content {
+    padding: 20px;
+}
+
+.gallery-content h3 {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.gallery-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* --- Sección del Juego Iframe --- */
+.game-section {
+    padding: 80px 5%;
+    background: linear-gradient(to bottom, var(--bg-main), #080c14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .game-wrapper {
