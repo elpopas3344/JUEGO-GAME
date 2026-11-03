@@ -8,37 +8,56 @@
 </head>
 <body>
 
-    <header>
-        <h1>Cheems: Huida de la Amsiedad</h1>
-        <p>Juego 3D Endless Runner desarrollado en Unity 6</p>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo">🎮 Cheems Run Portfolio</div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#juego" class="btn-nav">Jugar Ahora</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Principal (Hero): Portada + Información -->
+    <header id="inicio" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-image-box">
+                <img src="IMAGEN1.JPG" alt="Cheems: Huida de la Amsiedad Portada" class="game-banner">
+            </div>
+            <div class="hero-info">
+                <span class="badge">Unity 6 WebGL</span>
+                <h1>Cheems: Huida de la Amsiedad</h1>
+                <p class="tagline">Un divertido juego Endless Runner 3D ambientado en el universo de los memes. Corre a toda velocidad, esquiva obstáculos surrealistas y alcanza tu cheemsburger.</p>
+                
+                <div class="specs-box">
+                    <h3>Detalles Técnicos</h3>
+                    <ul>
+                        <li><strong>Motor:</strong> Unity 6</li>
+                        <li><strong>Estilo:</strong> Low Poly / Cartoon 3D</li>
+                        <li><strong>Plataforma:</strong> Navegador Web (WebGL)</li>
+                    </ul>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="#juego" class="btn btn-primary">🎮 Jugar en la Web</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main class="container">
-        <!-- Banner / Portada del juego -->
-        <section class="banner-section">
-            <img src="IMAGEN1.jpg" alt="Portada Cheems: Huida de la Amsiedad" class="game-banner">
-        </section>
+    <!-- Sección del Juego Interactivo -->
+    <section id="juego" class="game-section">
+        <div class="section-title">
+            <h2>¡Prueba el Juego en Directo!</h2>
+            <p>Usa las flechas del teclado para jugar directamente desde el navegador.</p>
+        </div>
+        <div class="game-container">
+            <iframe src="unity_build/index.html" title="Cheems Game WebGL"></iframe>
+        </div>
+    </section>
 
-        <!-- Descripción del Proyecto -->
-        <section class="details">
-            <h2>Sobre el Proyecto</h2>
-            <p><strong>Cheems: Huida de la Amsiedad</strong> es un juego 3D del género Endless Runner en el que controlas a Cheems mientras esquiva obstáculos surrealistas del mundo memero para alcanzar la cheemsburger y escapar de la Amsiedad.</p>
-            <ul>
-                <li><strong>Motor:</strong> Unity 6 (WebGL)</li>
-                <li><strong>Estilo Visual:</strong> Low Poly / Cartoon 3D</li>
-                <li><strong>Plataforma:</strong> Navegador Web</li>
-            </ul>
-        </section>
-
-        <!-- Contenedor del Juego Interactivos (iframe) -->
-        <section class="game-container">
-            <h2>¡Juega Ahora!</h2>
-            <iframe src="unity_build/index.html" title="Cheems Game"></iframe>
-        </section>
-    </main>
-
+    <!-- Pie de página -->
     <footer>
-        <p>&copy; 2026 - Desarrollado por elpopas3344</p>
+        <p>&copy; 2026 - Desarrollado por elpopas3344 | Universidad del Valle</p>
     </footer>
 
 </body>
