@@ -1,104 +1,173 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cheems: Huida de la Amsiedad | Portafolio WebGL</title>
+
+    <title>Cheems: Huida de la Amsiedad</title>
+
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Barra de Navegación -->
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">
-            <span class="logo-icon">🐶</span> Cheems Run <span class="badge-tag">Portfolio</span>
+            🐶 Cheems Run
+            <span class="badge-tag">Portfolio</span>
         </div>
+
         <ul class="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#galeria">Documentación</a></li>
-            <li><a href="#juego" class="btn-nav">🎮 Jugar Ahora</a></li>
+            <li><a href="#juego" class="btn-nav">🎮 Jugar</a></li>
         </ul>
     </nav>
 
-    <!-- Sección Principal (Hero) -->
+    <!-- PORTADA Y DESCRIPCIÓN -->
     <header id="inicio" class="hero-section">
+
         <div class="hero-container">
+
             <div class="hero-image-box">
-                <img src="imagenes/portada.jpg" alt="Cheems: Huida de la Amsiedad Portada" class="game-banner">
-                <div class="image-glow"></div>
+                <img src="Imagenes/Portada.jpg"
+                     alt="Portada del videojuego Cheems">
             </div>
-            
+
             <div class="hero-info">
+
                 <div class="badge-wrapper">
-                    <span class="badge">Unity 6 WebGL</span>
+                    <span class="badge">Unity 6</span>
                     <span class="badge badge-dev">Endless Runner 3D</span>
                 </div>
+
                 <h1>Cheems: Huida de la Amsiedad</h1>
-                <p class="tagline">Un divertido juego Endless Runner 3D ambientado en el universo de los memes. Corre a toda velocidad, esquiva obstáculos surrealistas y alcanza tu merecida cheemsburger.</p>
-                
+
+                <p class="tagline">
+                    ¡Ayuda a Cheems a escapar de la Amsiedad!
+                    Corre, esquiva obstáculos y recoge puntos
+                    en esta divertida aventura inspirada en los memes.
+                    ¿Podrás llegar hasta tu cheemsburger?
+                </p>
+
                 <div class="specs-box">
-                    <h3>🛠️ Detalles Técnicos</h3>
+                    <h3>🛠️ Información del proyecto</h3>
+
                     <ul>
                         <li><strong>Motor:</strong> Unity 6</li>
-                        <li><strong>Estilo Gráfico:</strong> Low Poly / Cartoon 3D</li>
-                        <li><strong>Plataforma:</strong> Navegador Web (WebGL)</li>
+                        <li><strong>Género:</strong> Endless Runner 3D</li>
+                        <li><strong>Estilo:</strong> Low Poly / Cartoon</li>
+                        <li><strong>Plataforma:</strong> WebGL</li>
                     </ul>
                 </div>
-                
+
                 <div class="hero-actions">
-                    <a href="#juego" class="btn btn-primary">🚀 Jugar en Directo</a>
+                    <a href="#juego" class="btn btn-primary">
+                        🚀 Jugar ahora
+                    </a>
                 </div>
+
             </div>
         </div>
     </header>
 
-    <!-- Sección de Documentación / Galerías -->
+    <!-- DOCUMENTACIÓN -->
     <section id="galeria" class="gallery-section">
+
         <div class="section-title">
-            <h2>🎨 Documentación y Diseño del Juego</h2>
-            <p>Conoce los detalles de modelado del personaje y las mecánicas narrativas.</p>
+            <h2>🎨 Documentación del Proyecto</h2>
+            <p>Conoce el diseño, desarrollo y narrativa del videojuego.</p>
         </div>
 
         <div class="gallery-grid">
+
+            <!-- INFOGRAFÍA -->
             <div class="gallery-card">
-                <img src="imagenes/infografia.jpg" alt="Infografía Explicativa del Personaje 3D - Cheems">
+
+                <img src="Imagenes/Infografia.png"
+                     alt="Infografía del personaje Cheems">
+
                 <div class="gallery-content">
-                    <h3>Infografía del Personaje</h3>
-                    <p>Desglose técnico de las proporciones, estilo "Stylized Cartoon 3D / Low Poly" y configuración de colliders para Cheems.</p>
+                    <h3>📋 Infografía</h3>
+
+                    <p>
+                        Presentación del personaje Cheems,
+                        sus características visuales, modelado 3D
+                        y aspectos técnicos de su diseño.
+                    </p>
                 </div>
+
             </div>
 
+            <!-- STORYTELLING -->
             <div class="gallery-card">
-                <img src="imagenes/storytelling.jpg" alt="StoryTelling y Mecánicas del Juego">
+
+                <img src="Imagenes/StoryTelling.png"
+                     alt="Storytelling del videojuego">
+
                 <div class="gallery-content">
-                    <h3>StoryTelling & UI</h3>
-                    <p>Mecánicas de juego: la persecución de la nube de "Amsiedad", recolección de puntos, pantallas de victoria y estados de derrota (¡Bonk!).</p>
+                    <h3>📖 StoryTelling</h3>
+
+                    <p>
+                        Explicación de la historia, objetivos,
+                        mecánicas de juego, obstáculos y
+                        sistema de victoria y derrota.
+                    </p>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- Sección del Juego Interactivo -->
+    <!-- JUEGO -->
     <section id="juego" class="game-section">
+
         <div class="section-title">
-            <h2>🕹️ ¡Prueba el Juego en Directo!</h2>
-            <p>Usa los controles de tu teclado para moverte directamente desde el navegador.</p>
+            <h2>🕹️ ¡Juega Cheems Run!</h2>
+
+            <p>
+                Pon a prueba tus reflejos y ayuda a Cheems
+                a escapar de la Amsiedad.
+            </p>
         </div>
+
         <div class="game-wrapper">
+
             <div class="game-container">
-                <iframe src="unity_build/index.html" title="Cheems Game WebGL" allowfullscreen></iframe>
+
+                <iframe
+                    src="unity_build/index.html"
+                    title="Cheems Run - Videojuego WebGL"
+                    allowfullscreen>
+                </iframe>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Pie de página -->
     <footer>
+
         <div class="footer-content">
-            <p>&copy; 2026 - Desarrollado por <strong>elpopas3344</strong> | Universidad Privada del Valle</p>
-            <p class="footer-sub">Hecho con pasión para la comunidad de desarrollo de videojuegos.</p>
+
+            <p>
+                © 2026 - Desarrollado por
+                <strong>elpopas3344</strong>
+                | Universidad Privada del Valle
+            </p>
+
+            <p class="footer-sub">
+                Proyecto académico de desarrollo de videojuegos.
+            </p>
+
         </div>
+
     </footer>
 
 </body>
