@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheems: Huida de la Amsiedad | Portafolio WebGL</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts para una tipografía moderna -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,6 +17,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#galeria">Documentación</a></li>
             <li><a href="#juego" class="btn-nav">🎮 Jugar Ahora</a></li>
         </ul>
     </nav>
@@ -25,7 +26,8 @@
     <header id="inicio" class="hero-section">
         <div class="hero-container">
             <div class="hero-image-box">
-                <img src="IMAGEN1.JPG" alt="Cheems: Huida de la Amsiedad Portada" class="game-banner">
+                <!-- Ruta corregida a tu carpeta Imagenes -->
+                <img src="Imagenes/Portada.jpg" alt="Cheems: Huida de la Amsiedad Portada" class="game-banner">
                 <div class="image-glow"></div>
             </div>
             
@@ -52,6 +54,32 @@
             </div>
         </div>
     </header>
+
+    <!-- Sección de Documentación / Galerías (Infografía y StoryTelling) -->
+    <section id="galeria" class="gallery-section">
+        <div class="section-title">
+            <h2>🎨 Documentación y Diseño del Juego</h2>
+            <p>Conoce los detalles de modelado del personaje y las mecánicas narrativas.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="Imagenes/Infografia.jpg" alt="Infografía Explicativa del Personaje 3D - Cheems">
+                <div class="gallery-content">
+                    <h3>Infografía del Personaje</h3>
+                    <p>Desglose técnico de las proporciones, estilo "Stylized Cartoon 3D / Low Poly" y configuración de colliders para Cheems.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="Imagenes/StoryTelling.jpg" alt="StoryTelling y Mecánicas del Juego">
+                <div class="gallery-content">
+                    <h3>StoryTelling & UI</h3>
+                    <p>Mecánicas de juego: la persecución de la nube de "Amsiedad", recolección de puntos, pantallas de victoria y estados de derrota (¡Bonk!).</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Sección del Juego Interactivo -->
     <section id="juego" class="game-section">
