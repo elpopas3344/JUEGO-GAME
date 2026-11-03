@@ -1,8 +1,6 @@
-/* --- Variables y Estilos Base --- */
 :root {
     --bg-main: #0b0f19;
     --bg-card: #131c2e;
-    --bg-card-hover: #1b263b;
     --border-color: #2a3b5c;
     --accent: #f72585;
     --accent-glow: rgba(247, 37, 133, 0.3);
@@ -28,7 +26,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- Barra de Navegación --- */
 .navbar {
     position: fixed;
     top: 0;
@@ -85,15 +82,8 @@ body {
     padding: 8px 16px;
     border-radius: 8px;
     box-shadow: 0 4px 12px var(--primary-glow);
-    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
-.btn-nav:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(76, 201, 240, 0.5);
-}
-
-/* --- Sección Hero (Principal) --- */
 .hero-section {
     padding: 140px 5% 80px 5%;
     display: flex;
@@ -122,18 +112,6 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.5s ease;
-}
-
-.hero-image-box:hover .game-banner {
-    transform: scale(1.03);
-}
-
-.image-glow {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(11, 15, 25, 0.6), transparent);
-    pointer-events: none;
 }
 
 .hero-info {
@@ -201,10 +179,6 @@ body {
     color: var(--text-main);
 }
 
-.hero-actions {
-    margin-top: 10px;
-}
-
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -220,12 +194,6 @@ body {
     box-shadow: 0 6px 20px var(--accent-glow);
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(247, 37, 133, 0.5);
-}
-
-/* --- Sección de Galería / Documentación --- */
 .gallery-section {
     padding: 60px 5%;
     background: rgba(19, 28, 46, 0.4);
@@ -263,7 +231,7 @@ body {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .gallery-card:hover {
@@ -293,7 +261,6 @@ body {
     color: var(--text-muted);
 }
 
-/* --- Sección del Juego Iframe --- */
 .game-section {
     padding: 80px 5%;
     background: linear-gradient(to bottom, var(--bg-main), #080c14);
@@ -324,7 +291,6 @@ body {
     border: none;
 }
 
-/* --- Footer --- */
 footer {
     padding: 30px 5%;
     background: #06090f;
@@ -345,27 +311,19 @@ footer {
     opacity: 0.7;
 }
 
-/* --- Responsividad para Móviles y Tablets --- */
 @media (max-width: 900px) {
     .hero-container {
         grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
     }
-
     .hero-info {
         align-items: center;
     }
-
     .badge-wrapper {
         justify-content: center;
     }
-
     .hero-info h1 {
         font-size: 2.2rem;
-    }
-
-    .navbar {
-        padding: 1rem 4%;
     }
 }
