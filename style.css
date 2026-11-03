@@ -1,235 +1,320 @@
+/* --- Variables y Estilos Base --- */
 :root {
-    --primary-color: #00f2fe;
-    --secondary-color: #ff007f;
-    --bg-dark: #070913;
-    --bg-surface: #0b0f19;
-    --card-bg: #111827;
-    --text-color: #f8fafc;
+    --bg-main: #0b0f19;
+    --bg-card: #131c2e;
+    --bg-card-hover: #1b263b;
+    --border-color: #2a3b5c;
+    --accent: #f72585;
+    --accent-glow: rgba(247, 37, 133, 0.3);
+    --primary: #4cc9f0;
+    --primary-glow: rgba(76, 201, 240, 0.3);
+    --text-main: #f8f9fa;
     --text-muted: #94a3b8;
-    --transition: all 0.3s ease;
+    --font-main: 'Outfit', sans-serif;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-color);
-    scroll-behavior: smooth;
+    font-family: var(--font-main);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Navbar */
+/* --- Barra de Navegación --- */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 8%;
-    background-color: rgba(7, 9, 19, 0.95);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
+    padding: 1rem 5%;
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
     z-index: 1000;
-    border-bottom: 1px solid rgba(0, 242, 254, 0.15);
 }
 
-.navbar .logo {
-    font-weight: 800;
-    color: var(--primary-color);
-    font-size: 1.2rem;
-}
-
-.navbar ul {
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
     display: flex;
-    list-style: none;
-    gap: 1.5rem;
     align-items: center;
+    gap: 8px;
 }
 
-.navbar a {
-    color: var(--text-color);
+.badge-tag {
+    font-size: 0.75rem;
+    background: rgba(76, 201, 240, 0.15);
+    color: var(--primary);
+    padding: 2px 8px;
+    border-radius: 20px;
+    border: 1px solid rgba(76, 201, 240, 0.3);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
     text-decoration: none;
+    color: var(--text-muted);
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: var(--transition);
+    transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-    color: var(--primary-color);
+.nav-links a:hover {
+    color: var(--primary);
 }
 
 .btn-nav {
-    background: var(--primary-color);
-    color: #000 !important;
-    padding: 0.5rem 1.2rem;
-    border-radius: 6px;
-    font-weight: 700 !important;
+    background: linear-gradient(135deg, var(--primary), #3a86ff);
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--primary-glow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
-/* Hero Section (Dos Columnas) */
+.btn-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(76, 201, 240, 0.5);
+}
+
+/* --- Sección Hero (Principal) --- */
 .hero-section {
-    padding: 4rem 8%;
-    background: radial-gradient(circle at 20% 30%, #131c31 0%, var(--bg-dark) 70%);
+    padding: 140px 5% 80px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-container {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
     max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    align-items: center;
 }
 
 .hero-image-box {
-    flex: 1.2;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
 }
 
 .game-banner {
     width: 100%;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-    border: 2px solid rgba(0, 242, 254, 0.3);
+    display: block;
+    transition: transform 0.5s ease;
 }
 
+.hero-image-box:hover .game-banner {
+    transform: scale(1.03);
+}
+
+.image-glow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(11, 15, 25, 0.6), transparent);
+    pointer-events: none;
+}
+
+/* --- Información y Detalles del Hero --- */
 .hero-info {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.badge-wrapper {
+    display: flex;
+    gap: 10px;
 }
 
 .badge {
-    background: linear-gradient(135deg, var(--secondary-color), #ff529a);
-    color: #fff;
-    padding: 0.3rem 0.8rem;
+    background: rgba(247, 37, 133, 0.15);
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
     font-weight: 700;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 1rem;
-    box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+    border: 1px solid rgba(247, 37, 133, 0.3);
+}
+
+.badge-dev {
+    background: rgba(76, 201, 240, 0.15);
+    color: var(--primary);
+    border-color: rgba(76, 201, 240, 0.3);
 }
 
 .hero-info h1 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    color: #fff;
+    font-size: 2.75rem;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.15;
+    color: #fff;
 }
 
 .tagline {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
 }
 
 .specs-box {
-    background: var(--card-bg);
-    padding: 1rem 1.2rem;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    margin-bottom: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 18px;
+    border-radius: 12px;
 }
 
 .specs-box h3 {
-    font-size: 0.95rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
 .specs-box ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
     font-size: 0.9rem;
     color: var(--text-muted);
 }
 
-.specs-box li {
-    margin-bottom: 0.3rem;
+.specs-box strong {
+    color: var(--text-main);
+}
+
+.hero-actions {
+    margin-top: 10px;
 }
 
 .btn {
-    padding: 0.8rem 1.6rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
     display: inline-block;
-    transition: var(--transition);
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.btn-primary { 
-    background: linear-gradient(135deg, var(--primary-color), #4facfe); 
-    color: #000;
-    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent), #7209b7);
+    color: white;
+    box-shadow: 0 6px 20px var(--accent-glow);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 242, 254, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(247, 37, 133, 0.5);
 }
 
-/* Sección del Juego */
+/* --- Sección del Juego Iframe --- */
 .game-section {
-    padding: 4rem 8%;
-    background-color: var(--bg-surface);
-    text-align: center;
+    padding: 60px 5%;
+    background: linear-gradient(to bottom, var(--bg-main), #080c14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section-title {
-    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .section-title h2 {
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
 }
 
 .section-title p {
     color: var(--text-muted);
 }
 
-.game-container {
+.game-wrapper {
+    width: 100%;
     max-width: 1000px;
-    margin: 0 auto;
-    background: var(--card-bg);
-    padding: 10px;
-    border-radius: 14px;
-    border: 1px solid rgba(0, 242, 254, 0.2);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--bg-card);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
 .game-container iframe {
     width: 100%;
-    height: 520px;
+    height: 100%;
     border: none;
-    border-radius: 8px;
-    display: block;
 }
 
-/* Footer */
+/* --- Footer --- */
 footer {
+    padding: 30px 5%;
+    background: #06090f;
+    border-top: 1px solid var(--border-color);
     text-align: center;
-    padding: 2rem;
-    background-color: var(--bg-dark);
     color: var(--text-muted);
     font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-/* Responsivo para celulares o pantallas pequeñas */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-sub {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* --- Responsividad para Móviles y Tablets --- */
 @media (max-width: 900px) {
     .hero-container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 30px;
         text-align: center;
     }
+
     .hero-info {
-        display: flex;
-        flex-direction: column;
         align-items: center;
+    }
+
+    .badge-wrapper {
+        justify-content: center;
+    }
+
+    .hero-info h1 {
+        font-size: 2.2rem;
+    }
+
+    .navbar {
+        padding: 1rem 4%;
     }
 }
